@@ -19,7 +19,7 @@ import java.util.Map;
  * Author: hou-jch
  * Date: 2024/9/3
  */
-@Component
+
 public class HouApiClient {
 
     private String gatewayHost;
@@ -60,11 +60,10 @@ public class HouApiClient {
 
 
     public String getNameByPost(String name) {
-        Map<String,Object> paramMap = new HashMap<>();
-        paramMap.put("name",name);
-        String result = HttpUtil.post(gatewayHost +"/api/name/names", paramMap);
-        System.out.println(result);
-        return result;
+        String jsonStr = JSONUtil.toJsonStr(name);
+        HttpResponse httpResponse = HttpRequest.post(gatewayHost +"/api/name/names").addHeaders(getHeaderMap(jsonStr)).body(jsonStr).execute();
+        System.out.println(httpResponse.body());
+        return httpResponse.body();
     }
 
 

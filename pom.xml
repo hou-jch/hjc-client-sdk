@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.hjc</groupId>
-    <artifactId>hjjc-client-sdk</artifactId>
+    <artifactId>hjc-client-sdk</artifactId>
     <version>0.0.2</version>
-    <name>hjjc-client-sdk</name>
-    <description>hjjc-client-sdk</description>
+    <name>hjc-client-sdk</name>
+    <description>hjc-client-sdk</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,6 +33,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.hjc</groupId>
+            <artifactId>hjc-common</artifactId>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
